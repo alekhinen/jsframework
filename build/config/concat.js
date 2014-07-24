@@ -3,7 +3,8 @@ module.exports = {
     src: [
       'src/framework.js',
       'src/event.js',
-      'src/model.js'
+      'src/model.js',
+      'src/view.js'
     ],
     dest: 'dist/framework.js'
   },
