@@ -1,4 +1,7 @@
 module.exports = [
   'jshint',
-  'lintspaces'
+  'lintspaces',
+  'concat',
+  'connect',
+  'mocha_phantomjs'
 ];

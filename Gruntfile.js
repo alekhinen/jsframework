@@ -6,7 +6,16 @@ module.exports = function(grunt) {
     jshint: require('./build/config/jshint'),
 
     // whitespace rules
-    lintspaces: require('./build/config/lintspaces')
+    lintspaces: require('./build/config/lintspaces'),
+
+    // concatenation
+    concat: require('./build/config/concat'),
+
+    // test server
+    connect: require('./build/config/connect'),
+
+    // tests
+    'mocha_phantomjs': require('./build/config/mocha')
 
   });
 

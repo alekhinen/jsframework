@@ -61,7 +61,7 @@ module.exports = {
       undef: true,
       // more allowed globals
       globals: {
-        Ash: true,
+        Framework: true,
         getFixture: true,
         basepath: true,
         describe: true,
@@ -91,27 +91,27 @@ module.exports = {
   // _type, _each, .etc will work -- so the check on /dist/Ash.js
   // is to make sure that once it's all wrapped in a closure, we
   // didn't leak any variables or try to use anything that's undefined
-  dist: {
-    files: {
-      src: ['dist/app.js']
-    },
-    options: {
-      // allow browser globals
-      browser: true,
-      // don't allow use of undefined vars
-      undef: true,
-      // don't allow unused vars
-      unused: 'vars',
-      // allow function hoisting
-      '-W003': true,
-      // use of `this` in strict mode on functions that aren't methods
-      '-W040': true,
-      // more allowed globals
-      globals: {
-        Ash: true,
-        Symbol: true,
-        setImmediate: true
-      }
-    }
-  }
+  // dist: {
+  //   files: {
+  //     src: ['dist/framework.js']
+  //   },
+  //   options: {
+  //     // allow browser globals
+  //     browser: true,
+  //     // don't allow use of undefined vars
+  //     undef: true,
+  //     // don't allow unused vars
+  //     unused: 'vars',
+  //     // allow function hoisting
+  //     '-W003': true,
+  //     // use of `this` in strict mode on functions that aren't methods
+  //     '-W040': true,
+  //     // more allowed globals
+  //     globals: {
+  //       Ash: true,
+  //       Symbol: true,
+  //       setImmediate: true
+  //     }
+  //   }
+  // }
 };
