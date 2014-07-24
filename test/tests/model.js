@@ -1,10 +1,16 @@
-var expected;
+var expected, ExpectedModel;
 
 describe( 'Running through methods for Model', function() {
   expected = new Framework.Model({
     name: 'tyler',
     occupation: 'loitering',
     company: 'loiter squad'
+  });
+
+  ExpectedModel = Framework.Model.extend({
+    getWild: function() {
+      return 'ASDFKEAF:FLEAXXS';
+    }
   });
 
   it( 'should get attributes', function() {
@@ -18,6 +24,18 @@ describe( 'Running through methods for Model', function() {
     assert.equal( expected.set( 'grunt', function() {
       return 'GRUNT';
     } ).get( 'grunt' )(), 'GRUNT' );
+  });
+
+  it( 'should extend Model', function() {
+    expected = new ExpectedModel({
+      first_name: 'bingo',
+      last_name: 'bingerson',
+      occupation: 'bouncer',
+      company: 'leeroy\'s'
+    });
+
+    assert.equal( expected.getWild(), 'ASDFKEAF:FLEAXXS' );
+    assert.equal( expected.get('last_name'), 'bingerson' );
   });
 
 });
