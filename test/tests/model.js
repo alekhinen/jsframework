@@ -38,4 +38,14 @@ describe( 'Running through methods for Model', function() {
     assert.equal( expected.get('last_name'), 'bingerson' );
   });
 
+  it( 'should listen to Model changes', function() {
+    expected = new ExpectedModel({
+      first_name: 'bingo'
+    });
+    expected.on( 'change', function() {
+      return 'something changed';
+    });
+    assert.equal( expected.set('last_name', 'adams'), 'something changed' );
+  });
+
 });

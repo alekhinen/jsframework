@@ -6,7 +6,7 @@
     <link href="../node_modules/mocha/mocha.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <!-- Required for browser reporter -->
+    <!-- Required for browser reporter ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <div id="mocha"></div>
     <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
@@ -17,6 +17,14 @@
       window.assert = chai.assert;
     </script>
 
+    <!-- Templates ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <script type="template" id="example-tmpl">
+      <p>Lol this is a template</p>
+    </script>
+
+
+    <!-- Dependencies ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <script src="../dependencies/underscore.js"></script>
     <script src="../dist/framework.js"></script>
     <script src="test.js"></script>
 

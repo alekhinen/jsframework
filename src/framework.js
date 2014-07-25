@@ -15,11 +15,3 @@ var Framework = (function () {
   return framework;
 
 }());
-
-// function Framework() {
-
-// }
-
-// Framework.prototype = {
-
-// };

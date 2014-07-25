@@ -24,6 +24,16 @@ Framework.Model = (function () {
       return this;
     },
 
+    toJSON: function() {
+      var result = {};
+
+      for ( var key in this.attributes ) {
+        result[ key ] = this.attributes[ key ];
+      }
+
+      return result;
+    },
+
     on:   Framework.Event.prototype.on,
     off:  Framework.Event.prototype.off,
     emit: Framework.Event.prototype.emit
