@@ -45,6 +45,13 @@ Framework.Event = (function () {
         }
       }
       return this;
+    },
+
+    trigger: function( name ) {
+      var events = this.events[ name ];
+
+      // TODO: ?
+
     }
 
   };

@@ -63,6 +63,13 @@ Framework.Event = (function () {
         }
       }
       return this;
+    },
+
+    trigger: function( name ) {
+      var events = this.events[ name ];
+
+      // TODO: ?
+
     }
 
   };
@@ -132,10 +139,15 @@ Framework.Model = (function () {
 
 Framework.View = (function () {
 
-  function View() {
+  function View( obj ) {
     this.events = {};
     this.el = document.createElement( 'div' );
     document.body.appendChild( this.el );
+
+    for ( var key in obj ) {
+      this[ key ] = obj[ key ];
+    }
+
   }
 
   View.prototype = {
